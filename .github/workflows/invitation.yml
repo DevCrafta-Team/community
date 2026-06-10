@@ -1,37 +1,21 @@
 name: Invitation Action
 
 on:
-issues:
-types:
-- labeled
+  issues:
+    types: [labeled]
 
 jobs:
-automate_invite:
-runs-on: ubuntu-latest
+  automate_invite:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Debug
-    run: |
-      echo "Issue User: ${{ github.event.issue.user.login }}"
-      echo "Actor: ${{ github.actor }}"
-      echo "Organization: devcrafta-team"
-
-  - name: Invite-on-label
-    uses: vj-abigo/invite-on-label@v1.4
-    with:
-      organization: devcrafta-team
-      label: "✉️ github-invitation"
-      repo-token: ${{ secrets.REPO_GITHUB_TOKEN }}
-      comment: |
-        # Welcome to DevCrafta Team!
-
-        Please check your email and accept the GitHub invitation.
-
-        Great to have you in our community.
-
-        Community:
-        https://github.com/DevCrafta-Team
-
-        Feel free to share our community with other developers interested in learning, collaborating, and contributing.
-    env:
-      INVITE_TOKEN: ${{ secrets.INVITE_ORG_TOKEN }}
+    steps:
+      - name: Invite-on-label
+        uses: vj-abigo/invite-on-label@v1.4
+        with:
+          organization: devcrafta-team
+          label: ✉️ github-invitation
+          repo-token: ${{ secrets.REPO_GITHUB_TOKEN }}
+          comment: "<h1><b>Welcome to DevCrafta Team!</b></h1><br>Please check your mail to accept the invitation sent by GitHub! 🤖<br><h1>About us</h1>💻 Great to have you in our community  <br>✨Looking forward to your valuable contributions! <br>🤓 You can also check our community ✨ [DevCrafta Team](https://github.com/DevCrafta-Team)
+</a><br>💜 You can also share our community with other folks who want to learn about development, tech, and contribute together and with us 👉💜👈"
+        env:
+          INVITE_TOKEN: ${{ secrets.INVITE_ORG_TOKEN }}
