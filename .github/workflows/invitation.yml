@@ -12,7 +12,7 @@ jobs:
       - name: Invite-on-label
         uses: vj-abigo/invite-on-label@v1.4
         with:
-          organization: Huniko-Team
+          organization: DevCrafta-Team
           label: ✉️ github-invitation
           repo-token: ${{ secrets.REPO_GITHUB_TOKEN }}
           comment: "<h1><b>Welcome to Huniko Team!</b></h1><br>Please check your mail to accept the invitation sent by GitHub! 🤖<br><h1>About us</h1>💻 Great to have you in our community  <br>✨Looking forward to your valuable contributions! <br>🤓 You can also check our community ✨ [Huniko Team](https://github.com/Huniko-Team)
