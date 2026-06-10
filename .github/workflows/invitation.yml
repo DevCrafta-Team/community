@@ -15,7 +15,7 @@ jobs:
           organization: DevCrafta-Team
           label: ✉️ github-invitation
           repo-token: ${{ secrets.REPO_GITHUB_TOKEN }}
-          comment: "<h1><b>Welcome to Huniko Team!</b></h1><br>Please check your mail to accept the invitation sent by GitHub! 🤖<br><h1>About us</h1>💻 Great to have you in our community  <br>✨Looking forward to your valuable contributions! <br>🤓 You can also check our community ✨ [Huniko Team](https://github.com/Huniko-Team)
+          comment: "<h1><b>Welcome to DevCrafta Team!</b></h1><br>Please check your mail to accept the invitation sent by GitHub! 🤖<br><h1>About us</h1>💻 Great to have you in our community  <br>✨Looking forward to your valuable contributions! <br>🤓 You can also check our community ✨ [Huniko Team](https://github.com/Huniko-Team)
 </a><br>💜 You can also share our community with other folks who want to learn about development, tech, and contribute together and with us 👉💜👈"
         env:
           INVITE_TOKEN: ${{ secrets.INVITE_ORG_TOKEN }}
