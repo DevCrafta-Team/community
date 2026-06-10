@@ -9,7 +9,6 @@ jobs:
 automate_invite:
 runs-on: ubuntu-latest
 
-```
 steps:
   - name: Debug
     run: |
@@ -36,4 +35,3 @@ steps:
         Feel free to share our community with other developers interested in learning, collaborating, and contributing.
     env:
       INVITE_TOKEN: ${{ secrets.INVITE_ORG_TOKEN }}
-```
